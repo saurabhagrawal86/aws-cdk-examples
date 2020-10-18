@@ -1,0 +1,24 @@
+{
+  "Resources": {
+    "mybucketidF37D0A52": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "aws:kms"
+              }
+            }
+          ]
+        },
+        "BucketName": "mycdktestbucket-18-10-2020",
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain"
+    }
+  }
+}
